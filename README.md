@@ -1,25 +1,25 @@
 # ML-Labsheet-1
 
 
-Q1
+# Q1 Python Version
 import sys
 print("Python Version:") print(sys.version)
 
-Q2
+# Q2 Jupyter Notebook
 
 pip install notebook jupyter notebook
 
-Q3
+# Q3 Install NumPy
 
 pip install numpy
 import numpy as np print("NumPy Version:", np.version)
 
-Q4
+# Q4 Install Pandas
 
 pip install pandas
 import pandas as pd print("Pandas Version:", pd.version)
 
-Q5
+# Q5 Matplotlib Plot
 
 pip install matplotlib
 import matplotlib.pyplot as plt
@@ -29,7 +29,7 @@ plt.plot(x, y, marker="o") plt.title("Simple Line Plot") plt.xlabel("X Values")
 plt.ylabel("Y Values") 
 plt.show()
 
-Q6
+# Q6 Seaborn Plot
 
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -38,18 +38,18 @@ sns.scatterplot(data=data, x="total_bill", y="tip")
 plt.title("Total Bill vs Tip")
 plt.show()
 
-Q7
+# Q7 Scikit Learn
 
 pip install scikit-learn
 import sklearn print("Scikit-learn Version:", sklearn.version)
 
-Q8
+# Q8 First Python Program
 name = input("Enter your name: ") print("Hello", name) print("Welcome to Python Programming!")
 
-Q9
+# Q9 Python Script
 num1 = 10 num2 = 20 total = num1 + num2 print("First Number:", num1) print("Second Number:", num2) print("Sum =", total)
 
-Q10
+# Q10 Virtual Environment
 
 Create virtual environment:
 python -m venv myenv
@@ -66,55 +66,55 @@ pip list
 Deactivate virtual environment:
 deactivate
 
-Q11
+# Q11 Load CSV
 
 data = pd.read_csv("sample_data.csv") print(data)
 
-Q12
+# Q12 Head Records
 
 data = pd.read_csv("sample_data.csv") print(data.head())
 
-Q13
+# Q13 Tail Records
 
 data = pd.read_csv("sample_data.csv") print(data.tail())
 
-Q14
+# Q14 Dataset Shape
 
 data = pd.read_csv("sample_data.csv") rows, columns = data.shape print("Total Rows:", rows) print("Total Columns:", columns)
 
-Q15
+# Q15 Column Names
 
 data = pd.read_csv("sample_data.csv") print(data.columns)
 
-Q16
+# Q16 Data Types
 
 data = pd.read_csv("sample_data.csv") print(data.dtypes)
 
-Q17
+# Q17 Descriptive Stats
 
 data = pd.read_csv("sample_data.csv") print(data.describe())
 
-Q18
+# Q18 Dataset Info
 
 data = pd.read_csv("sample_data.csv") data.info()
 
-Q19
+# Q19 Missing Values
 
 data = pd.read_csv("sample_data.csv") print(data.isnull())
 
-Q20
+# Q20 Missing Count
 
 data = pd.read_csv("sample_data.csv") print(data.isnull().sum())
 
-Q21
+# Q21 Unique Values
 
 data = pd.read_csv("sample_data.csv") print(data["Department"].unique())
 
-Q22
+# Q22 Value Frequency
 
 data = pd.read_csv("sample_data.csv") print(data["Department"].value_counts())
 
-Q23
+# Q23 Rename Columns
 
 import pandas as pd
 data = pd.read_csv("student_data.csv")
@@ -124,56 +124,56 @@ data = data.rename(columns={
 })
 print(data)
 
-Q24
+# Q24 Loc Selection
 
 import pandas as pd
 data = pd.read_csv("student_data.csv")
 selected_data = data.loc[0:2, ["Name", "Marks"]]
 print(selected_data)
 
-Q25
+# Q25 Iloc Selection
 
 data = pd.read_csv("sample_data.csv") result = data.iloc[0:5, 0:2] print(result)
 
-Q26
+# Q26 Filter Records
 
 data = pd.read_csv("sample_data.csv") result = data[data["Age"] > 20] print(result)
 
-Q27
+# Q27 Sort Dataset
 
 data = pd.read_csv("sample_data.csv") sorted_data = data.sort_values(by="Age") print(sorted_data)
 
-Q28
+# Q28 Add Column
 
 data = pd.read_csv("sample_data.csv") data["Status"] = "Active" print(data)
 
-Q29
+# Q29 Delete Column
 
 data = pd.read_csv("sample_data.csv") data = data.drop("Status", axis=1) print(data)
 
-Q30
+# Q30 Remove Duplicates
 
 data = pd.read_csv("sample_data.csv") data = data.drop_duplicates() print(data)
 
-Q31
+# Q31 Save CSV
 
 data = pd.read_csv("sample_data.csv") data.to_csv("modified_data.csv", index=False) print("Dataset saved successfully.")
 
-Q32
+# Q32 Load Sklearn Dataset
 
 from sklearn.datasets import load_iris iris = load_iris() print("Feature Data:") print(iris.data) print("Target Data:") print(iris.target)
 
-Q33
+# Q33 Histogram
 
 data = pd.read_csv("sample_data.csv") plt.hist(data["Age"], bins=5, edgecolor="black") plt.title("Histogram of Age") plt.xlabel("Age") plt.ylabel("Frequency") plt.show()
 
-Q34
+# Q34 Scatter Plot
 
 data = pd.read_csv("sample_data.csv") plt.scatter(data["Age"],data["Marks"]) plt.title("Relationship between Age and Marks") 
 plt.xlabel("Age") 
 plt.ylabel("Marks") 
 plt.show()
 
-Q35
+# Q35 Correlation Heatmap
 
 data = pd.read_csv("sample_data.csv") correlation=data.select_dtypes(include="number").corr() sns.heatmap(correlation, annot=True, cmap="coolwarm") plt.title("Correlation Heatmap") plt.show()
